@@ -1,0 +1,900 @@
+@import url("reset.css");
+
+
+@font-face {
+    font-family: 'NotoSerifKR-Regular';
+    src: url('../font폴더/NotoSerifKR-Regular.otf');
+}
+
+
+.t_hidden {
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* 공통 */
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'NotoSerifKR-Regular';
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: 'NotoSerifKR-Regular';
+    margin: 10rem 0;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.dsecrition {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 10rem 0;
+    text-align: center;
+}
+
+/* main */
+
+.main_img {
+    width: 100%;
+    height: 1089px;
+    background-image: url(../img폴더/main.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* header */
+
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.header_menu ul {
+    display: flex;
+
+}
+
+.header_menu li {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'NotoSerifKR-Regular';
+    margin-left: 6rem;
+    color: #FFB900;
+}
+
+input {
+    width: 75%;
+    height: 45px;
+    border-radius: 100px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding-left: 1.2rem;
+    padding-right: 1.5rem;
+}
+
+.input_search {
+    position: relative;
+    right: 30px;
+    color: #000;
+    transition: all 250ms ease;
+}
+
+.input_search:hover {
+    transform: scale(1.2);
+    color: #FFB900;
+    cursor: pointer;
+}
+
+.title_1 {
+    position: relative;
+    top: 215px;
+    line-height: 70px;
+    letter-spacing: 10px;
+    color: #FFB900;
+    font-family: 'NotoSerifKR-Regular';
+    font-size: 3.5rem;
+    font-weight: 900;
+
+}
+
+.title_2 {
+    position: relative;
+    top: 421px;
+    color: #FFB900;
+    font-family: 'NotoSerifKR-Regular';
+    font-size: 3.1rem;
+    font-weight: 900;
+}
+
+/* Album */
+
+.album_title {
+    font-size: 1.2rem;
+    font-weight: 900;
+    padding: 1.5rem 0;
+}
+
+.album_dsecrition {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.8rem 0;
+}
+
+.album_dsecrition span {
+    text-decoration: underline;
+}
+
+.M_text {
+    display: none;
+}
+
+
+/* Goods */
+
+.imgbox,
+.goods_item {
+    margin-bottom: 5rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.imgbox:hover {
+    transform: scale(1.1);
+}
+
+.goods_text {
+    text-align: center;
+    line-height: 2.9rem;
+    margin-top: 2.3rem;
+}
+
+.imgbox {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+
+/* Reservations */
+
+.reservations_title {
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin: 2rem 0;
+
+}
+
+.reservations_dsecrition {
+    font-size: 1rem;
+    font-weight: 200;
+    line-height: 30px;
+}
+
+.map {
+    width: 100%;
+    height: 800px;
+    background-color: gray;
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+
+.footer {
+    margin: 5rem 0;
+}
+
+.footer_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.copy {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1rem
+}
+
+.icon {
+    font-size: 1.3rem;
+    letter-spacing: 1.2rem;
+    transition: all 250ms ease;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    color: #FFB900;
+    cursor: pointer;
+}
+
+.company ul li {
+    margin-bottom: 2rem;
+
+}
+
+.COMPANY>ul>li {
+    margin-bottom: 2rem;
+}
+
+.COMPANY>ul>li:first-child {
+    font-family: 'NotoSerifKR-Regular';
+    font-weight: 900;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.SUPPORY ul li {
+    margin-bottom: 2rem;
+
+}
+
+.SUPPORY>ul>li {
+    margin-bottom: 2rem;
+}
+
+.SUPPORY>ul>li:first-child {
+    font-family: 'NotoSerifKR-Regular';
+    font-weight: 900;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+.menu{
+    display: none;
+}
+.m_menu {
+    display: none;
+    background-color: #FFB900;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.m_menu ul {
+    margin: 80px;
+    line-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.m_menu ul li {
+    font-size: 4rem;
+    font-family: 'NotoSerifKR-Regular';
+    font-weight: 900;
+}
+
+.m_menu .close {
+    position: absolute;
+    top: 150px;
+    right: 100px;
+
+}
+@media screen and (max-width:1024px) {
+    .menu {
+        display: block;
+        padding: 0.7rem 1.5rem;
+        border-radius: 10px;
+        border: none;
+        background-color: #fff;
+        color: #000;
+        font-family: 'NotoSerifKR-Regular';
+    }
+    .menu:hover{
+        background-color: #FFB900;
+    }
+    button.close{
+        padding: 0.7rem 1.5rem;
+        color: #000;
+        background-color: #fff;
+        border-radius: 10px;
+        font-family: 'NotoSerifKR-Regular';
+      
+    }
+    
+}
+
+@media screen and (max-width:1200px) {
+    .main_img {
+        width: 100%;
+        height: 1200px;
+        background-image: url(../img폴더/m_main_1.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .header_logo,
+    input,
+    .input_search {
+        display: none;
+    }
+
+    .title_1 {
+        position: relative;
+        top: 185px;
+        text-align: center;
+        line-height: 60px;
+        letter-spacing: 10px;
+        color: #000;
+        font-family: 'NotoSerifKR-Regular';
+        font-size: 3.5rem;
+        font-weight: 900;
+
+    }
+
+    .title_2 {
+        position: relative;
+        top: 451px;
+        text-align: center;
+        color: #000;
+        font-family: 'NotoSerifKR-Regular';
+        font-size: 3.5rem;
+        font-weight: 900;
+    }
+
+    .header_menu li {
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-family: 'NotoSerifKR-Regular';
+        margin-left: 8rem;
+        color: #FFB900;
+    }
+
+    .A_text {
+        display: none;
+    }
+
+    .A_img {
+        margin: 3rem 0;
+    }
+
+    .M_text {
+        display: block;
+        text-align: center;
+    }
+
+    .copy {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
+
+    }
+
+    .icon {
+        font-size: 1.3rem;
+        letter-spacing: 1.2rem;
+        transition: all 250ms ease;
+        margin-bottom: 3rem;
+    }
+
+    .icon:hover {
+        transform: scale(1.2);
+        color: #FFB900;
+        cursor: pointer;
+    }
+
+    .COMPANY ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+
+    .SUPPORY ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+
+    @media screen and (max-width:991px) {
+        .main_img {
+            width: 100%;
+            height: 1200px;
+            background-image: url(../img폴더/m_main_1.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .header_logo,
+        input,
+        .input_search {
+            display: none;
+        }
+
+        .title_1 {
+            position: relative;
+            top: 185px;
+            text-align: center;
+            line-height: 60px;
+            letter-spacing: 10px;
+            color: #000;
+            font-family: 'NotoSerifKR-Regular';
+            font-size: 3rem;
+            font-weight: 900;
+
+        }
+
+        .title_2 {
+            position: relative;
+            top: 451px;
+            text-align: center;
+            color: #000;
+            font-family: 'NotoSerifKR-Regular';
+            font-size: 3rem;
+            font-weight: 900;
+        }
+
+        .header_menu li {
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: 'NotoSerifKR-Regular';
+            margin-left: 6rem;
+            color: #FFB900;
+        }
+
+
+        .A_text {
+            display: none;
+        }
+
+        .A_img {
+            margin: 3rem 0;
+        }
+
+        .M_text {
+            display: block;
+            text-align: center;
+        }
+
+        .copy {
+            display: flex;
+            flex-direction: column;
+            font-size: 0.8rem;
+            margin-bottom: 1.5rem;
+
+        }
+
+        .icon {
+            font-size: 1.3rem;
+            letter-spacing: 1.2rem;
+            transition: all 250ms ease;
+            margin-bottom: 3rem;
+        }
+
+        .icon:hover {
+            transform: scale(1.2);
+            color: #FFB900;
+            cursor: pointer;
+        }
+
+        .COMPANY ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+
+        .SUPPORY ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+
+
+    }
+
+    @media screen and (max-width:767px) {
+        .main_img {
+            width: 100%;
+            height: 1200px;
+            background-image: url(../img폴더/m_main_1.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .header_logo,
+        input,
+        .input_search {
+            display: none;
+        }
+
+        .title_1 {
+            position: relative;
+            top: 185px;
+            text-align: center;
+            line-height: 60px;
+            letter-spacing: 10px;
+            color: #000;
+            font-family: 'NotoSerifKR-Regular';
+            font-size: 2.8rem;
+            font-weight: 900;
+
+        }
+
+        .title_2 {
+            position: relative;
+            top: 451px;
+            text-align: center;
+            color: #000;
+            font-family: 'NotoSerifKR-Regular';
+            font-size: 2.8rem;
+            font-weight: 900;
+        }
+
+        .header_menu li {
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: 'NotoSerifKR-Regular';
+            margin-left: 5rem;
+            color: #FFB900;
+        }
+
+
+        .A_text {
+            display: none;
+        }
+
+        .A_img {
+            margin: 3rem 0;
+        }
+
+        .M_text {
+            display: block;
+            text-align: center;
+        }
+
+        .copy {
+            font-size: 0.8rem;
+            margin-bottom: 1.5rem;
+
+        }
+
+        .icon {
+            font-size: 1.3rem;
+            letter-spacing: 1.2rem;
+            transition: all 250ms ease;
+        }
+
+        .icon:hover {
+            transform: scale(1.2);
+            color: #FFB900;
+            cursor: pointer;
+        }
+
+        .COMPANY ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .SUPPORY ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .reservations_dsecrition {
+            font-size: 0.9rem;
+            font-weight: 200;
+            line-height: 30px;
+        }
+
+        .dsecrition {
+            font-size: 1rem;
+            letter-spacing: 0.2rem;
+            line-height: 30px;
+            font-weight: 500;
+            margin: 10rem 0;
+            text-align: center;
+        }
+        .menu{
+            display: none;
+        }
+
+
+    }
+
+    @media screen and (max-width:575px) {
+        .main_img {
+            width: 100%;
+            height: 100%;
+            min-height: 700px;
+            background-image: url(../img폴더/m_main_1.png);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .header_logo,
+        input,
+        .input_search {
+            display: none;
+        }
+
+        .title_1 {
+            position: relative;
+            top: 145px;
+            text-align: center;
+            line-height: 60px;
+            letter-spacing: 5px;
+            color: #000;
+            font-family: 'NotoSerifKR-Regular';
+            font-size: 2.1rem;
+            font-weight: 900;
+
+        }
+
+        .title_2 {
+            position: relative;
+            top: 251px;
+            text-align: center;
+            color: #000;
+            font-family: 'NotoSerifKR-Regular';
+            font-size: 2.1rem;
+            font-weight: 900;
+        }
+
+        .header_menu li {
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-family: 'NotoSerifKR-Regular';
+            margin-left: 2rem;
+            color: #FFB900;
+        }
+        .A_text {
+            display: none;
+        }
+
+        .A_img {
+            margin: 3rem 0;
+        }
+
+        .M_text {
+            display: block;
+            text-align: center;
+        }
+
+        .copy {
+            font-size: 0.8rem;
+            margin-bottom: 1.5rem;
+
+        }
+
+        .icon {
+            font-size: 1rem;
+            letter-spacing: 1.2rem;
+            transition: all 250ms ease;
+        }
+
+        .icon:hover {
+            transform: scale(1.2);
+            color: #FFB900;
+            cursor: pointer;
+        }
+
+        .COMPANY ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .SUPPORY ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .reservations_dsecrition {
+            font-size: 0.9rem;
+            font-weight: 200;
+            line-height: 30px;
+        }
+
+        .dsecrition {
+            font-size: 1rem;
+            letter-spacing: 0.2rem;
+            line-height: 30px;
+            font-weight: 500;
+            margin: 10rem 0;
+            text-align: center;
+        }
+        .menu{
+            display: none;
+        }
+
+
+
+
+    }
+
+
+
+
+    @media screen and (max-width:400px) {
+        .main_img {
+            width: 100%;
+            height: 100%;
+            min-height: 700px;
+            background-image: url(../img폴더/m_main_1.png);
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .header_logo,
+        input,
+        .input_search {
+            display: none;
+        }
+
+        .title_1 {
+            position: relative;
+            top: 105px;
+            text-align: center;
+            line-height: 48px;
+            letter-spacing: 1px;
+            color: #000;
+            font-family: 'NotoSerifKR-Regular';
+            font-size: 2.1rem;
+            font-weight: 900;
+
+        }
+
+        .title_2 {
+            position: relative;
+            top: 171px;
+            text-align: center;
+            color: #000;
+            font-family: 'NotoSerifKR-Regular';
+            font-size: 1.8rem;
+            font-weight: 900;
+        }
+
+        .header_menu li {
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-family: 'NotoSerifKR-Regular';
+            margin-left: 1.5rem;
+            color: #FFB900;
+        }
+        .A_text {
+            display: none;
+        }
+
+        .A_img {
+            margin: 3rem 0;
+        }
+
+        .M_text {
+            display: block;
+            text-align: center;
+        }
+
+        .copy {
+            font-size: 0.8rem;
+            margin-bottom: 1.5rem;
+
+        }
+
+        .icon {
+            font-size: 1rem;
+            letter-spacing: 1.2rem;
+            transition: all 250ms ease;
+        }
+
+        .icon:hover {
+            transform: scale(1.2);
+            color: #FFB900;
+            cursor: pointer;
+        }
+
+        .COMPANY ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .SUPPORY ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .reservations_dsecrition {
+            font-size: 0.9rem;
+            font-weight: 200;
+            line-height: 30px;
+        }
+
+        .dsecrition {
+            font-size: 1rem;
+            letter-spacing: 0.2rem;
+            line-height: 30px;
+            font-weight: 500;
+            margin: 10rem 0;
+            text-align: center;
+        }
+        .menu{
+            display: none;
+        }
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+}
